@@ -3,6 +3,7 @@ class CreateRatings < ActiveRecord::Migration
     create_table :ratings do |t|
       t.references :product, index: true
       t.integer :score
+      t.references :user, index: true
 
       t.timestamps null: false
     end
